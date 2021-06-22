@@ -5,18 +5,17 @@
 /**
  * main - Entry point
  *
- * Return Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-int main(void)
+int main(void);
 {
-int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 printf("Last digit of %d is ", n);
 n %= 10;
 printf("%d and ", n);
 if (n > 5)
-printf("is greater than 5\n")
+printf("is greater than 5\n");
 else if (n == 0)
 printf("is 0\n");
 else if (n < 6 && n != 0)
