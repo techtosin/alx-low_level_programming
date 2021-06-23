@@ -1,11 +1,8 @@
 #include "holberton.h"
 
 /**
- * print _alphabet_x10 - function that prints 10 times the alphabet,
- * in lowercase
- * Return: nothing.
+ * print _alphabet_x10 - Prints 10 times the alphabet, in lowercase.
  */
-
 void print_alphabet_x10(void)
 {
 	int letter;
