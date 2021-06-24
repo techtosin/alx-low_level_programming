@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * positive_or_negative - print whether n is positive or negative .
- * @n: n argument for number n
- */
-void postive_or_negative(int n)
+* positive_or_negative - print whether n is positive or negative.
+* @n: n argument for number n
+*/
+void positive_or_negative(int n)
 {
 	if (n > 0)
 		printf("%d is positive\n", n);
