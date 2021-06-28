@@ -4,7 +4,7 @@
  * @str: pointer char
  * Return: void
  */
-void puts half(char *str)
+void puts_half(char *str)
 {
 	int i = 0, j, tmp;
 
