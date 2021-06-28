@@ -1,15 +1,20 @@
-nclude "holberton.h"
+#include "holberton.h"
+
 /**
- *  * _puts - puts string to stdout
- *   *
- *    * @str: string to print to stdout
- *     *
- *      * Return: always void
- *       */
+ * _puts - put string
+ * @str: first parameter
+ *
+ * Description: prints a string
+ * Return: Always (0)
+ */
+
 void _puts(char *str)
 {
-		while (*str)
-					_putchar(*str++);
-			_putchar('\n');
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
 }
 
