@@ -1,25 +1,25 @@
 #include "holbert.h"
 
 /**
- * puts2 - prints alternate characters
+ * puts2 - prints characters
+ * @str: input string
  *
- * @str: string to alternate print
- *
- * Return: awlays void
+ * Description: prints character of a string, starting first character
+ * Return: Always (0)
  */
 
 void puts2(char *str)
 {
-	int i;
+int i;
 
-	while (str[i] != '\0')
+while (str[i] != '\0')
+{
+	if (i % 2 == 0)
 	{
-		if (i % 2 == 0)
-		{
-			_putchar (str[i]);
-		}
-		i++;
-
+		_putchar(str[i]);
 	}
-	_putchar('\n')
+	i++;
+}
+_putchar('\n')
+
 }
