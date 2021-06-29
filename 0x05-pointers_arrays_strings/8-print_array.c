@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * print_array - print array up to  n elements
- * @a: Array to be read from
- * @n: Number of elements to be read
- * Return: Always 0
+ * print_array - Write a function that prints n elements of an array of integers
+ * @a: pointer integer
+ * @n: parameter integer
+ * Return: void
  */
 void print_array(int *a, int n)
 {
