@@ -1,16 +1,17 @@
-nclude <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
- *  * main - multiplies two arguments and prints result
- *   * @argc: argument count
- *    * @argv: argument vector
- *     * Return: 0 if no errors
- *      */
+ * main - multiplies two arguments and prints result
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 if no errors
+ */
 
 int main(int argc, char *argv[])
 {
 	int i, first_num, sec_num, product;
+
 	if (argc != 3)
 	{
 		return (printf("Error\n"), 1);
@@ -20,8 +21,8 @@ int main(int argc, char *argv[])
 		first_num = atoi(argv[1]);
 		sec_num = atoi(argv[2]);
 	}
-	product = first_num *sec_num;
+	product = first_num * sec_num;
 	printf("%d\n", product);
 	return (0);
 }
-© 2021 GitHub, Inc.
+
