@@ -1,14 +1,15 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
- *  * isInteger - checks if s is an integer
- *   * @s: string to check
- *    * Return: 0 or 1
- *     */
+ * isInteger - checks if s is an integer
+ * @s: string to check
+ * Return: 0 or 1
+ */
 
 int isInteger(const char *s)
 {
 	int i = 0;
+
 	while (s[i] != '\0')
 	{
 		if (s[i] < '0' || s[i] > '9')
@@ -19,16 +20,17 @@ int isInteger(const char *s)
 }
 
 /**
- *  * main - adds positive numbers
- *   * @argc: int
- *    * @argv: list
- *     * Return: 0
- *      */
+ * main - adds positive numbers
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
 
 int main(int argc, char const *argv[])
 {
 	int i = 0, coinUsed = 0, coin = 0;
 	int coins[] = {25, 10, 5, 2, 1};
+
 	if (argc != 2)
 	{
 		printf("Error\n");
