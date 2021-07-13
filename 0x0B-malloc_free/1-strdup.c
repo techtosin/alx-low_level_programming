@@ -31,4 +31,3 @@ m[i] = str[i];
 }
 return (m);
 }
-©
