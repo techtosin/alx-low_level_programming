@@ -1,21 +1,22 @@
-nclude "holberton.h"
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 /**
- *  * _calloc - allocates memory for an array
- *   * @nmemb: first input parameter
- *    * @size: second input parameter
- *     *
- *      * Return: pointer
- *       */
+ * _calloc - allocates memory for an array
+ * @nmemb: first input parameter
+ * @size: second input parameter
+ *
+ * Return: pointer
+ */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *pointer;
 	unsigned int i;
-	if (!nmemb || !size)
+
+	if  (!nmemb || !size)
 	{
 		return (NULL);
 	}
@@ -30,4 +31,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	return (pointer);
 }
-© 2021 GitHub, Inc
+
