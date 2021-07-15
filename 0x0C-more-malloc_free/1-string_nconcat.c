@@ -1,14 +1,14 @@
-nclude "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- *  * string_nconcat - concatenates two strings
- *   * @s1: destination string
- *    * @s2: source string
- *     * @n: number of bytes from s2 to be copied
- *      * Return: concatenated string
- *       */
+ * string_nconcat - concatenates two strings
+ * @s1: destination string
+ * @s2: source string
+ * @n: number of bytes from s2 to be copied
+ * Return: concatenated string
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -33,3 +33,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < t2; i++)
 		p[t1 + i] = s2[i];
 	p[t1 + t2] = '\0';
+	return (p);
+}
