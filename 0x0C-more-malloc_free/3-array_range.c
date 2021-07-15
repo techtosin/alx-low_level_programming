@@ -1,14 +1,14 @@
-nclude "holberton.h"
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 /**
- *  * array_range - creates an array of integers
- *   * @min: first intput parameter
- *    * @max: second input parameter
- *     *
- *      * Return: Always(0) Success
- *       */
+ * array_range - creates an array of integers
+ * @min: first intput parameter
+ * @max: second input parameter
+ *
+ * Return: Always(0) Success
+ */
 
 int *array_range(int min, int max)
 {
