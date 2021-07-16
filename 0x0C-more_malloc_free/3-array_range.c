@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- *  * array_range - creates an array of ints containing all numbers
- *   * from min to max
- *    * @min: the first element of the array
- *     * @max: the last element of the array
- *      *
- *       * Return: a pointer to the newly created array.
- *        */
+ * array_range - creates an array of ints containing all numbers
+ *  from min to max
+ *  @min: the first element of the array
+ *  @max: the last element of the array
+ *
+ * Return: a pointer to the newly created array.
+ */
 int *array_range(int min, int max)
 {
 	int *n_array;
@@ -26,5 +26,4 @@ int *array_range(int min, int max)
 		n_array[j] = i;
 
 	return (n_array);
-}
 }
