@@ -1,37 +1,45 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: destination string
- * @s2: source string
- * @n: number of bytes from s2 to be copied
- * Return: concatenated string
- */
-
+ *  * string_nconcat - allocates a block of memory to store concatenated strings.
+ *   * @s1: the first string
+ *    * @s2: the second string
+ *     * @n: the number of s2 to concatenate to s1
+ *      *
+ *       * Return: a pointer to allocated memory block.
+ *        */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int t1, t2, i;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-		t1 = 0;
-	for (t1 = 0; s1[t1]; ++t1)
-		;
-	if (s2 == NULL)
-		t2 = 0;
-	for (t2 = 0; s2[t2]; ++t2)
-		;
-	if (t2 > n)
-		t2 = n;
-	p = malloc((t1 + t2 + 1) * sizeof(char));
-	if (p == NULL)
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (!s)
 		return (NULL);
-	for (i = 0; i < t1; i++)
-		p[i] = s1[i];
-	for (i = 0; i < t2; i++)
-		p[t1 + i] = s2[i];
-	p[t1 + t2] = '\0';
-	return (p);
-}
+
+	while (i < len1)
+	{
+			s[i] = s1[i];
+			i++;
+		}
+
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
+
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
+
+	s[i] = '\0';
+
+	return (s);
+}}

@@ -1,10 +1,10 @@
-nclude "holberton.h"
+#include "holberton.h"
 
 /**
- *  * _puts - prints a string, followed by a new line,
- *   * @str: pointer to the string to print
- *    * Return: void
- *    */
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
+ */
 
 
 void _puts(char *str)
@@ -19,10 +19,10 @@ void _puts(char *str)
 }
 
 /**
- *  * _atoi - convert a string to an integer.
- *   * @s: char type string
- *    * Return: integer converted
- *     */
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
 
 int _atoi(const char *s)
 {
@@ -46,10 +46,10 @@ int _atoi(const char *s)
 }
 
 /**
- *  * print_int - prints an integer.
- *   * @n: int
- *    * Return: 0
- *     */
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
+ */
 
 void print_int(unsigned long int n)
 {
@@ -68,11 +68,11 @@ void print_int(unsigned long int n)
 }
 
 /**
- *  * main - print the result of the multiplication, followed by a new line
- *   * @argc: int
- *    * @argv: list
- *     * Return: 0
- *      */
+ * main - print the result of the multiplication, followed by a new line
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
 
 int main(int argc, char const *argv[])
 {
