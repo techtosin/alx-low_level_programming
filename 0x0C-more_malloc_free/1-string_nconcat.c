@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- *  * string_nconcat - allocates a block of memory to store concatenated strings.
- *   * @s1: the first string
- *    * @s2: the second string
- *     * @n: the number of s2 to concatenate to s1
- *      *
- *       * Return: a pointer to allocated memory block.
- *        */
+ * string_nconcat - allocates a block of memory to store concatenated strings.
+ * @s1: the first string
+ * @s2: the second string
+ * @n: the number of s2 to concatenate to s1
+ *
+ * Return: a pointer to allocated memory block.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
@@ -29,12 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	while (i < len1)
 	{
-			s[i] = s1[i];
-			i++;
-		}
+		s[i] = s1[i];
+		i++;
+	}
 
 	while (n < len2 && i < (len1 + n))
-		s[i++] = s2[j++];
+		s[ii] = s2[j++];
 
 	while (n >= len2 && i < (len1 + len2))
 		s[i++] = s2[j++];
@@ -42,4 +42,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s[i] = '\0';
 
 	return (s);
-}}
+}
