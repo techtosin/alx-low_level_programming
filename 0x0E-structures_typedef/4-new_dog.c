@@ -1,14 +1,14 @@
-nclude "dog.h"
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *  * new_dog - create new data structure for dog
- *   * @name: name of dog
- *    * @age: age of dog
- *     * @owner: dog owner
- *      *
- *       * Return: Pointer to new dog
- *        **/
+ * new_dog - create new data structure for dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: dog owner
+ *
+ * Return: Pointer to new dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
@@ -42,10 +42,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- *  * _strlen - determinates the lenght of a string
- *   * @s: pointer to string
- *    * Return: the length
- *     */
+ * _strlen - determinates the lenght of a string
+ * @s: pointer to string
+ * Return: the length
+ */
 int _strlen(char *s)
 {
 	int a;
@@ -56,11 +56,11 @@ int _strlen(char *s)
 }
 
 /**
- *  * _strcpy - copies a pointed string
- *   * @dest: pointer to the destine string
- *    * @src: pointer to the source string
- *     * Return: the adress of the destiny string
- *      */
+ * _strcpy - copies a pointed string
+ * @dest: pointer to the destine string
+ * @src: pointer to the source string
+ * Return: the adress of the destiny string
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int a = 0;
