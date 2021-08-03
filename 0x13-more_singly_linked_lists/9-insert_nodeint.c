@@ -1,45 +1,41 @@
-nclude "lists.h"
+#include "lists.h"
 
-/**
- *  * insert_nodeint_at_index - prints elements of a list_t list.
- *   * @head: head node
- *    * @n: number of input
- *     * @idx: is the index of the list where the new node should be added
- *      * Return: the address of the new node, or NULL if it failed
- *       */
-
+/*
+ * insert_nodeint_at_index - inserts a new node at a given position.
+ * @head: the pointer to the starting node of the listint_t list
+ * @idx: the position where the new node is to be inserted
+ * @n: the data to be stored in the new node
+ *
+ * Return: the address of the new node, or NULL if it failed
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-		listint_t *current;
-			listint_t *new_node;
+	listint_t *new, *temp = *head;
+	unsigned int i = 0;
 
-				register uint i;
+	new = malloc(sizeof(listint_t));
+	if (!new)
+		return (NULL);
 
-					new_node = malloc(sizeof(listint_t));
-						if (!head || !new_node)
-								{
-											return (NULL);
-												}
-							new_node->n = n;
-								if (!idx)
-										{
-													new_node->next = *head;
-															*head = new_node;
-																	return (new_node);
-																		}
-									current = *head;
-										while (current)
-												{
-															if (i == idx - 1)
-																		{
-																						new_node->next = current->next;
-																									current->next = new_node;
-																												return (new_node);
-																														}
-																	i++;
-																			current = current->next;
-																				}
-											free(new_node);
-												return (NULL);
+	new->n = n;
+
+	if (!idx)
+	{
+		new->next = temp;
+		*head = new;
+		return (new);
+	}
+
+	while (i++ < (idx - 1))
+	{
+		if (!temp || !(temp->next))
+			return (NULL);
+
+		temp = temp->next;
+	}
+
+	new->next = temp->next;
+	temp->next = new;
+
+	return (new);
 }
-
