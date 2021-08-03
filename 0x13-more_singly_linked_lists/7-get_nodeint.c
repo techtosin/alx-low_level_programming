@@ -1,32 +1,28 @@
-nclude "lists.h"
+#include "lists.h"
 
 /**
- *  * get_nodeint_at_index - prints elements of a list_t list
- *   * @head: head node
- *    * @index: index of the node, starting at 0
- *     * Return: the current node, else, return NULL
- *      */
+ * get_nodeint_at_index -obtains the node at given index
+ * @head: the starting pointer to listint_t list
+ * @index: the index of he node to be obtained
+ *
+ * Return:returns the nth node of a listint_t linked list.
+ */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-		unsigned int count;
-			listint_t *current_node;
+	unsigned int n = 0;
+	listint_t *temp;
 
-				count = 0;
-					current_node = head;
-						if (!(current_node))
-								{
-											return (NULL);
-												}
-							while (current_node != NULL)
-									{
-												if (count == index)
-															{
-																			return (current_node);
-																					}
-														count++;
-																current_node = current_node->next;
-																	}
-								return (current_node);
+	while (head)
+	{
+		if (n == index)
+		{
+			temp = head;
+			return (temp);
+		}
+		head = head->next;
+		n++;
+	}
+
+	return (NULL);
 }
-© 2021 GitHub, Inc.
