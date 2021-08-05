@@ -1,1 +1,2 @@
-The project it's all about binary
+This project it's all about bit manipulation
+
