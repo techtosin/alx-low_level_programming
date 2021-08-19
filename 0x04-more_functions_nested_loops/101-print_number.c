@@ -1,28 +1,27 @@
 #include "holberton.h"
 
 /**
- * print_number - prints n to stdout
- * @n: integer to print
- *
- * Return: void
+ * print_number - prints an integer
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
-	int divisor;
-	char digit, significant_zero = 0;
+unsigned int n1;
 
-	if (n < 0)
-		_putchar('-');
+if (n < 0)
+{
+n1 = -n;
+_putchar('-');
+}
+else
+{
+n1 = n;
+}
 
-	for (divisor = 1000000000; divisor != 0; divisor /= 10)
-	{
-		digit = n / divisor;
-		digit = digit < 0 ? -digit : digit;
-		n %= divisor;
+if (n1 / 10)
+{
+print_number(n1 / 10);
+}
 
-		if (!digit && !significant_zero && divisor != 1)
-			continue;
-		significant_zero = significant_zero || digit != 0;
-		_putchar(digit + '0');
-	}
+_putchar((n1 % 10) + '0');
 }

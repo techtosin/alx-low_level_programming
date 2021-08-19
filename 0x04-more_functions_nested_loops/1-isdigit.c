@@ -1,12 +1,14 @@
 #include "holberton.h"
 
 /**
- * _isdigit - returns 1 if c is a digit, else 0
- * @c: the character to check
+ * _isdigit - 1 if c is a digit
+ * @c: input value
  *
- * Return: 1 or 0
+ * Description: checks for a digit (0 through 9).
+ * Return: Always (0).
  */
+
 int _isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+return (c >= '0' && c <= '9');
 }

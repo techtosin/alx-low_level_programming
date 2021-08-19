@@ -1,32 +1,19 @@
 #include <stdio.h>
-#include <stdint.h>
 
 /**
- * main - starting point of the program
+ * main - prints the largest prime factor of 612852475143
  *
- * Return: void
+ * Return: always 0
  */
 int main(void)
 {
-	uintmax_t to_factor = 612852475;
-	unsigned long prime_factor = 2;
+unsigned long int i, n = 612852475143;
 
-	to_factor = to_factor * 1000 + 143;
-
-	if (to_factor % 3 == 0)
-	{
-		to_factor = to_factor / 3;
-		prime_factor = 3;
-	}
-	while (to_factor != 1)
-	{
-		while (to_factor % prime_factor != 0)
-		{
-			prime_factor += 2;
-		}
-		to_factor /= prime_factor;
-	}
-	printf("%lu\n", prime_factor);
-
-	return (0);
+for (i = 3; i < 782849; i = i + 2)
+{
+while ((n % i == 0) && (n != i))
+n = n / i;
+}
+printf("%lu\n", n);
+return (0);
 }
