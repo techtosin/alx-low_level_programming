@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _isalpha - Function checks if c is a letter, lowercase or
