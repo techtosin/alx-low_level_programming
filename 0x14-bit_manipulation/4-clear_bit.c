@@ -13,10 +13,11 @@ unsigned long int _to_power(int base, int power)
 
 	while (power)
 	{
-		res *=bsse;
+		res *= base;
 		power--;
-		return (res);
 	}
+	return (res);
+}
 
 /**
  * clear_bit - sets bit to zero at index index
@@ -28,7 +29,7 @@ unsigned long int _to_power(int base, int power)
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int test;
-	
+
 	if (index > sizeof(n) * 8 - 1)
 	{
 		return (-1);
@@ -36,4 +37,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	test = _to_power(2, index);
 	*n = (*n & test) ? *n ^ test : *n;
 	return (1);
+
 }
